@@ -9,7 +9,6 @@ export class CreateTodoDto {
   @IsString({ message: 'Description must be a string' })
   description: string;
 
-  @IsNotEmpty({ message: 'IsCompleted is required' })
   @IsBoolean({ message: 'IsCompleted must be a boolean value' })
   isCompleted: boolean;
 }

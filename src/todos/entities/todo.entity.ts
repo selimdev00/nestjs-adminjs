@@ -1,7 +1,7 @@
-import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
+import { BaseEntity, Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
 @Entity('todos')
-export class Todo {
+export class Todo extends BaseEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
@@ -11,6 +11,6 @@ export class Todo {
   @Column({ name: 'description', length: 255 })
   description: string;
 
-  @Column({ name: 'is_completed', nullable: false })
+  @Column({ name: 'is_completed', default: false })
   isCompleted: boolean;
 }

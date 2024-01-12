@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import { CreateTodoDto } from './dto/create-todo.dto';
-import { UpdateTodoDto } from './dto/update-todo.dto';
+import { CreateTodoDto } from './dto/create-todo.dto.js';
+import { UpdateTodoDto } from './dto/update-todo.dto.js';
 
 @Injectable()
 export class TodosService {
